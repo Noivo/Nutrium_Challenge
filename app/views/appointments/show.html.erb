@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @appointment.session %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @appointment.price %>
+</p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @appointment.clinic_id %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

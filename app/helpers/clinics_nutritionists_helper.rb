@@ -1,0 +1,2 @@
+module ClinicsNutritionistsHelper
+end

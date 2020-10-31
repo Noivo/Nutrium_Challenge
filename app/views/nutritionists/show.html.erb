@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong>Name:</strong>
+    <%= @nutritionist.name %>
+</p>
+
+<p>
+    <strong>Image_url:</strong>
+    <%= @nutritionist.image_url %>
+</p>
+
+<p>
+    <strong>Number:</strong>
+    <%= @nutritionist.number %>
+</p>
+
+
+
+
+
+<%= link_to 'Edit', edit_nutritionist_path(@nutritionist) %> |
+<%= link_to 'Back', nutritionists_path %>
