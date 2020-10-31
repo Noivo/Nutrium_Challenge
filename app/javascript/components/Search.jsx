@@ -124,7 +124,7 @@ useEffect(async () => {
     </Grey> 
     <FormatMain>
         <Footer/>
-    </FormatMain></div> : <FormatMain><Warning>Select a Location</Warning></FormatMain>
+    </FormatMain></div> : <FormatMain><Warning>Select a Location<p>(Ex. Porto or Braga)</p></Warning></FormatMain>
 
     return(
         <>
