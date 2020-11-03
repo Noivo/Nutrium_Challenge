@@ -83,7 +83,7 @@ function Search() {
     const [location, setLocation] = useState("");
     const [clinicsLocation, setClinicsLocation] = useState([]);
     const [nutritionists, setNutritionists] = useState([]);
-    const [appoitments, setAppointments] = useState([]);
+    const [appointments, setAppointments] = useState([]);
     const [show, setShow] = useState(false);
 
 useEffect(async () => {
@@ -113,13 +113,13 @@ useEffect(async () => {
         const nutritionistsID = allWorks.filter(worker => parseInt(worker.clinic_id) === clinicsLocaltions[0].id)        
         setNutritionists(allNutritionists.filter(nutritionist => nutritionist.id === parseInt(nutritionistsID[0].id)))
 
-        setAppointments(allAppointments.filter(appointment => appointment.clinic_id === clinicsLocaltions[0].id))  
+        setAppointments(allAppointments.filter(appointment => parseInt(appointment.clinic_id) === clinicsLocaltions[0].id))  
         setShow(true)
     }
 
     const displayCard = show ? <div><Grey>
         <FormatMain>
-            <Card nutritionists={nutritionists} clinicsLocation={clinicsLocation} appointments={appoitments} />
+            <Card nutritionists={nutritionists} clinicsLocation={clinicsLocation} appointments={appointments} />
         </FormatMain>
     </Grey> 
     <FormatMain>
